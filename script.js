@@ -2,7 +2,7 @@ window.onload=function() {
   donorList();
 }
 
- const donors = [{
+const donors = [{
   first: 'Jane',
   last: 'Doe',
   email: 'jdoe@woo.com',
@@ -125,7 +125,6 @@ const testing = (e) => {
       name.setAttribute( "id", "name")
       console.log('name', name)
       let emailVal = document.createElement('li');
-
       let orgVal = document.createElement('li');
       let cityVal = document.createElement('li');
       let zipVal = document.createElement('li');
@@ -174,4 +173,3 @@ const testing = (e) => {
    donorList();
  }
  document.getElementById('submit').addEventListener('click', testing)
-//  document.getElementById('submit').addEventListener('click', testing)
