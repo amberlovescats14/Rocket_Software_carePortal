@@ -116,16 +116,20 @@ const testing = (e) => {
     //  console.log(item.type + ' ' + typeOfDonors)
      if(typeOfDonors === 'all' || typeOfDonors === item.type){
       let listItem = document.createElement('ul')
+      listItem.setAttribute('id',`${donors.indexOf(item)}`)
+      listItem.setAttribute('contenteditable', 'false')
       let name = document.createElement('li');
       name.innerHTML = item.first + ' ' + item.last
       let removeButton = document.createElement('button')
       removeButton.innerHTML = "Delete"
       removeButton.setAttribute('id', `${donors.indexOf(item)}`)
       removeButton.onclick = deleteItem
+      let editButton = document.createElement('button')
+      editButton.innerHTML = 'Edit'
+      editButton.onclick = editItem
       name.setAttribute( "id", "name")
       console.log('name', name)
       let emailVal = document.createElement('li');
-
       let orgVal = document.createElement('li');
       let cityVal = document.createElement('li');
       let zipVal = document.createElement('li');
@@ -160,6 +164,7 @@ const testing = (e) => {
       listItem.appendChild(zipVal)
       listItem.appendChild(typVal)
       listItem.appendChild(removeButton)
+      listItem.appendChild(editButton)
       console.log(listItem)
       document.getElementById('donorList').appendChild(listItem)
      }
@@ -169,9 +174,25 @@ const testing = (e) => {
  }
  const deleteItem = (e) => {
   //  e.target.parentNode.remove(e.target);
-   console.log("button", e.target.id)
+  //  console.log("button", e.target.parentNode)
    donors.splice(e.target.id, 1)
    donorList();
+ }
+ const editItem = (e) => {
+  console.log("button", e.target.parentNode.id)
+  let targetId = e.target.parentNode.id
+  let blah = document.getElementById(targetId)
+  if(blah.contentEditable === 'true'){
+    e.target.innerHTML = 'Edit'
+    blah.setAttribute('contenteditable', 'false')
+    
+  }else{
+    e.target.innerHTML = 'Save'
+    blah.setAttribute('contenteditable', 'true')
+  }
+  // console.log(typeof(blah.contentEditable))
+  // blah.setAttribute('contenteditable', !blah.contentEditable)
+  // console.log(blah.contentEditable)
  }
  document.getElementById('submit').addEventListener('click', testing)
 //  document.getElementById('submit').addEventListener('click', testing)
