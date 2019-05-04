@@ -80,9 +80,14 @@ input {
 li {
   padding: 5px;
   list-style-type: none;
-  border-bottom: 1px solid #F26631;
+  /* border-bottom: 1px solid #F26631; */
   background: white;
-  background: whitesmoke;
+  /* background: whitesmoke; */
+}
+
+li:first-child {
+  border-bottom: 1px solid #F26631;
+  margin-bottom: 10px;
 }
 
 li b {
