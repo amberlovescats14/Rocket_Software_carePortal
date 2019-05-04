@@ -2,7 +2,7 @@
  const testing = (e) => {
   //  validateForm()
   //  e.preventDefault()
-   console.log('hello')
+//    console.log('hello')
    console.log(document.getElementById('firstname').value)
    let firstName = document.getElementById('firstname').value
    let lastName = document.getElementById('lastname').value
@@ -22,7 +22,7 @@
    donors.push(obj)
    console.log(obj)
    document.getElementById('donorForm').reset();
-   listDonors();
+   donorList();
    
  }
 //  const validateForm = () => {
@@ -32,8 +32,9 @@
 //     alert("First Name is Required!")
 //   }
   
-//  }
- const donorList = (obj) => {
+//  } 
+ const donorList = () => {
+   let current = donors[donors.length-1];
    let textVal = document.createElement('li');
    textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip
    document.getElementById('donorList').appendChild(textVal)

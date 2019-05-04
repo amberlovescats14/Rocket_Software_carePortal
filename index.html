@@ -15,7 +15,7 @@
 
   <div class="content_container">
     <div id="formWrapper">
-      <form  id="donorForm" name="add_new_donor">
+      <form  id="donorForm">
           <!-- adding a new donor - form-->
         <section id="contact">
           <label for="firstname">First Name</label>
@@ -56,12 +56,15 @@
 
       <div class="list-container">
         <ul id ="donorList">
-          <!-- Emilio render donors here -->
+          <!-- <script>
+            donors.map((donor)=> render(<li> {donor.first} </li>))
+          </script> -->
         </ul>
       </div>
   </div>
 
   <script src="./script.js"></script>
+  <!-- <script src="./donors.js"></script> -->
 </body>
 <script type="text/babel" src="script.js"></script>
 </html>
