@@ -8,7 +8,6 @@
    let lastName = document.getElementById('lastname').value
    let email = document.getElementById('email').value
    let group = document.getElementById('org').value
-   let type = document.getElementById('donorType').value
    let city = document.getElementById('city').value
    let zip = document.getElementById('zip').value
    let type = document.getElementById('donorType').value
@@ -27,13 +26,11 @@
     document.getElementById('donorForm').reset();
     donorList();
    }
-  //  console.log("dsd", type)
-  //  console.log(obj)
 
 
  }
-//  const validateForm = () => {
-//   let x = document.forms["add_new_donor"]["firstname"].value;
+ const validateForm = () => {
+  let x = document.forms["add_new_donor"]["firstname"].value;
 
 //   if(x == ''){
 //     alert("First Name is Required!")
