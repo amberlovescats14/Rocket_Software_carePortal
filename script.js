@@ -26,14 +26,20 @@
     document.getElementById('donorForm').reset();
     donorList();
    }
-
-
  }
+ 
  const donorList = () => {
    let current = donors[donors.length-1];
-   let textVal = document.createElement('li');
-   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Type: ' + current.type + ' Location: ' + current.city + ' Zip: ' + current.zip
-   document.getElementById('donorList').appendChild(textVal)
-  //  console.log(donors)
+   let listItem = document.createElement('li')
+   let name = document.createElement('b');
+   name.innerHTML = current.first + ' ' + current.last
+   let textVal = document.createElement('p');
+   textVal.innerHTML = 'Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip + ' Donoation Type: ' + current.type
+   listItem.appendChild(name)
+   listItem.appendChild(textVal)
+   console.log(listItem)
+   document.getElementById('donorList').appendChild(listItem)
+  //  document.getElementById('donorList').appendChild(textVal)
+  //  console.log(donors) 
  }
  document.getElementById('submit').addEventListener('click', testing)
