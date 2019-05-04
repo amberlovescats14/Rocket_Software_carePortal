@@ -27,10 +27,7 @@ window.onload=function() {
   org: 'Clintwood Church',
   city: 'Clintwood',
   zip: '57832',
-<<<<<<< HEAD
-=======
   type: 'items'
->>>>>>> be9fd9f389515c07d6803a3cace2eb6273963cfe
   },
 {
   first: 'Mary',
