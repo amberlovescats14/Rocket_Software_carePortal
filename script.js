@@ -10,7 +10,6 @@ window.onload=function() {
   city: 'Austin',
   zip: '78727'
 },
-
 {
   first: 'Keith',
   last: 'Hym',
@@ -25,9 +24,8 @@ window.onload=function() {
   email: 'jfish@woo.com',
   org: 'Clintwood Church',
   city: 'Clintwood',
-  zip: '57832'
+  zip: '57832',
   },
-
 {
   first: 'Mary',
   last: 'Hym',
@@ -88,6 +86,6 @@ const testing = (e) => {
   //  console.log(listItem)
   //  document.getElementById('donorList').appendChild(listItem)
   //  document.getElementById('donorList').appendChild(textVal)
-  //  console.log(donors) 
+  //  console.log(donors)
  }
  document.getElementById('submit').addEventListener('click', testing)
