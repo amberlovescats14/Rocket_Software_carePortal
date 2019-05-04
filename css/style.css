@@ -1,15 +1,7 @@
-<<<<<<< HEAD:style.css
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-=======
 html, body {
   font-family: 'Roboto', sans-serif;
 }
 
->>>>>>> 67155ee5d31996238253622d12d2f5d70114d44a:css/style.css
 h1 {
   background: orangered;
   text-align: center;
@@ -19,12 +11,28 @@ h1 {
 #formWrapper {
   background: grey;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px;
 }
-section {
+  section   {
   color: white;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
+#buttonWrapper {
+  width: 100%;
+}
+#submit {
+  width: 100%;
+  background: black;
+  color: white;
+  font-weight: 800;
+  border-radius: 12px;
+  margin: auto;
 
+}
