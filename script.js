@@ -1,5 +1,5 @@
  const testing = (e) => {
-  //  validateForm()
+   validateForm()
   //  e.preventDefault()
 //    console.log('hello')
    console.log(document.getElementById('firstname').value)
@@ -23,15 +23,15 @@
    donorList(obj);
    
  }
-//  const validateForm = () => {
-//   let x = document.forms["add_new_donor"]["firstname"].value;
+ const validateForm = () => {
+  let x = document.forms["add_new_donor"]["firstname"].value;
 
-//   if(x == ''){
-//     alert("First Name is Required!")
-//   }
+  if(x == ''){
+    alert("First Name is Required!")
+  }
   
 //  }
- const donorList = (obj) => {
+ const donorList = () => {
    let textVal = document.createElement('li');
    textVal.innerHTML = obj.first + ' ' + obj.last + ' ' + obj.email + ' ' + obj.org + ' ' + obj.city + ' ' + obj.zip
    document.getElementById('donorList').appendChild(textVal)
