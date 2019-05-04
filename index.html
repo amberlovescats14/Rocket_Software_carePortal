@@ -7,47 +7,50 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <title>CarePortal Donation Center</title>
+    <title>Donation Center</title>
 </head>
 <body>
-  <h1> Donor List & Donation Inventory </h1>
-  <div id="formWrapper">
-  <form id="donorForm" name="add_new_donor">
-      <!-- adding a new donor form-->
-    <section id="contact">
-      <label for="firstname">First Name</label>
-      <input type="text" name="firstname" id="firstname" placeholder="John">
-      
-      <label for="lastname">Last Name</label>
-      <input type="text" name="lastname" id="lastname" placeholder="Doe">
 
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="john@doe.com">
-    </section>
-   
-    <section id="group">
-      <label for="org">Organization</label>
-      <input type="text" name="org" id="org" placeholder="Mosiac Church">
-    </section>
+  <div class="content_container">
+      <h1> Donor List & Donation Inventory </h1>
+      <div id="formWrapper">
+      <form  id="donorForm" name="add_new_donor">
+          <!-- adding a new donor - form-->
+        <section id="contact">
+          <label for="firstname">First Name</label>
+          <input type="text" name="firstname" id="firstname" placeholder="John">
+          
+          <label for="lastname">Last Name</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Doe">
     
-    <section id="geo">
-      <label for="location">Location</label>
-      <input type="text" name="city" id="city" placeholder="Austin">
-      <input type="text" name="zip" id="zip" placeholder="78727">
-    </section>
-    <div id="buttonWrapper">
-    <button type="submit" id="submit">Register</button>
-    </div>
-  </form>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="john@doe.com">
+        </section>
+       
+        <section id="group">
+          <label for="org">Organization</label>
+          <input type="text" name="org" id="org" placeholder="Mosiac Church">
+        </section>
+        
+        <section id="geo">
+          <label for="location">Location</label>
+          <input type="text" name="city" id="city" placeholder="Austin">
+          <input type="text" name="zip" id="zip" placeholder="78727">
+        </section>
+        
+        <button  id="submit">Add New Donor</button>
+      </form>
+      </div>
+    
+    
+      <div class="list-container">
+        <ul id ="donorList">
+          <!-- Emilio render donors here -->
+        </ul>
+      </div>
   </div>
-
-
-  <div class="list-container">
-    <ul>
-      <!-- Emilio render donors here -->
-    </ul>
-  </div>
- 
+  
+  <script src="./script.js"></script>
 </body>
 <script type="text/babel" src="script.js"></script>
 </html>

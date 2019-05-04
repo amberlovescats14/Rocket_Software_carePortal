@@ -1,15 +1,31 @@
-'use strict';
-const readForms = (e) => {
-  e.preventDefault();
-  // console.log(document.getElementById('lastname'))
-  console.log('something')
-}
-const form = document.getElementById('donorForm');
-form.getElementById('submit').addEventListener("submit", function () => {
-  e.preventDefault();
-  // console.log(document.getElementById('lastname'))
-  console.log('something')
-});
-// .get('/addUser', function(req, res) {
-//   res.render('addUser');
-// });
+ const testing = (e) => {
+   e.preventDefault()
+   console.log('hello')
+   console.log(document.getElementById('firstname').value)
+   let firstName = document.getElementById('firstname').value
+   let lastName = document.getElementById('lastname').value
+   let email = document.getElementById('email').value
+   let group = document.getElementById('org').value
+   let city = document.getElementById('city').value
+   let zip = document.getElementById('zip').value
+   
+   let obj = {
+     first: firstName,
+     last: lastName,
+     email: email,
+     org: group,
+     city: city,
+     zip: zip
+   }
+  //  donors.push(obj)
+  console.log(obj)
+   donorList(obj);
+   
+ }
+ const donorList = (obj) => {
+   let textVal = document.createElement('li');
+   textVal.innerHTML = obj.first + ' ' + obj.last + ' ' + obj.email + ' ' + obj.org + ' ' + obj.city + ' ' + obj.zip
+   document.getElementById('donorList').appendChild(textVal)
+
+ }
+ document.getElementById('submit').addEventListener('click', testing)
