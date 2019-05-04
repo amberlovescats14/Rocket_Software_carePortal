@@ -73,7 +73,7 @@ const testing = (e) => {
    let typeOfDonors = document.getElementById('typeSelect').value
    donors.map((item) => {
      console.log(item.type + ' ' + typeOfDonors)
-     if(typeOfDonors === item.type){
+     if(typeOfDonors === 'all' || typeOfDonors === item.type){
       let listItem = document.createElement('li')
       let name = document.createElement('b');
       name.innerHTML = item.first + ' ' + item.last
