@@ -1,7 +1,7 @@
  const testing = (e) => {
   //  validateForm()
   //  e.preventDefault()
-   console.log('hello')
+//    console.log('hello')
    console.log(document.getElementById('firstname').value)
    let firstName = document.getElementById('firstname').value
    let lastName = document.getElementById('lastname').value
