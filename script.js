@@ -9,9 +9,8 @@ window.onload=function() {
   org: 'Mosaic',
   city: 'Austin',
   zip: '78727',
-  type: 'money'
+  type: 'Money'
 },
-
 {
   first: 'Keith',
   last: 'Hym',
@@ -19,7 +18,7 @@ window.onload=function() {
   org: 'Cowboy Church',
   city: 'Arp',
   zip: '78787',
-  type: 'food'
+  type: 'Services'
 },
 {
   first: 'Jane',
@@ -28,9 +27,8 @@ window.onload=function() {
   org: 'Clintwood Church',
   city: 'Clintwood',
   zip: '57832',
-  type: 'items'
+  type: 'Items'
   },
-
 {
   first: 'Mary',
   last: 'Hym',
@@ -38,13 +36,57 @@ window.onload=function() {
   org: 'Blessed Bay Church',
   city: 'San Francisco',
   zip: '23241',
-  type: 'food'
-},];
+  type: 'Food'
+},
+{
+  first: 'Heather',
+  last: 'Barr',
+  email: 'hnbarr@voo.com',
+  org: 'Index Church',
+  city: 'Arp',
+  zip: '75750',
+  type: 'Services'
+},
+{
+  first: 'Amber',
+  last: 'Johnson',
+  email: 'ajax@voo.com',
+  org: 'Sass Church',
+  city: 'San Antonio',
+  zip: '78247',
+  type: 'Food'
+},
+{
+  first: 'Josh',
+  last: 'Joll',
+  email: 'jollj@voo.com',
+  org: 'Json Church',
+  city: 'Austin',
+  zip: '78745',
+  type: 'Items'
+},
+{
+  first: 'Jonny',
+  last: 'Abowd',
+  email: 'jabowd@voo.com',
+  org: 'Styl Church',
+  city: 'Killen',
+  zip: '78665',
+  type: 'Services'
+},
+{
+  first: 'Emilio',
+  last: 'Sanchez',
+  email: 'esanchez@voo.com',
+  org: 'JS Church',
+  city: 'Pfluggerville',
+  zip: '78223',
+  type: 'Money'
+},
+];
 const testing = (e) => {
   //  validateForm()
   //  e.preventDefault()
-//    console.log('hello')
-//    console.log(document.getElementById('firstname').value)
    let firstName = document.getElementById('firstname').value
    let lastName = document.getElementById('lastname').value
    let email = document.getElementById('email').value
