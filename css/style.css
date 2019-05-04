@@ -23,6 +23,10 @@ button {
   margin-bottom: 20px;
 }
 
+a {
+  color: #F26631;
+}
+
 .header {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -90,6 +94,7 @@ input {
   overflow: scroll;
 
 }
+
 li {
   padding-bottom: 5px;
   list-style-type: none;
