@@ -26,19 +26,10 @@
     document.getElementById('donorForm').reset();
     donorList();
    }
-  //  console.log("dsd", type)
-  //  console.log(obj)
-   
-   
- }
-//  const validateForm = () => {
-//   let x = document.forms["add_new_donor"]["firstname"].value;
 
-//   if(x == ''){
-//     alert("First Name is Required!")
-//   }
-  
-//  } 
+
+ }
+ 
  const donorList = () => {
    let current = donors[donors.length-1];
    let listItem = document.createElement('li')
