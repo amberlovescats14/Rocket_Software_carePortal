@@ -190,9 +190,6 @@ const testing = (e) => {
     e.target.innerHTML = 'Save'
     blah.setAttribute('contenteditable', 'true')
   }
-  // console.log(typeof(blah.contentEditable))
-  // blah.setAttribute('contenteditable', !blah.contentEditable)
-  // console.log(blah.contentEditable)
  }
  document.getElementById('submit').addEventListener('click', testing)
 //  document.getElementById('submit').addEventListener('click', testing)
