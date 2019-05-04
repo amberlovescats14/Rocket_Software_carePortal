@@ -1,7 +1,11 @@
 'use strict'
-
-document.getElementById('submit').addEventListener("click", readForms);
 function readForms(){
-  console.log(document.getElementById('lastname'))
-
+  e.preventDefault();
+  // console.log(document.getElementById('lastname'))
+  console.log('something')
 }
+const form = document.getElementById('donorForm');
+form.getElementById('submit').addEventListener("submit", readForms);
+// .get('/addUser', function(req, res) {
+//   res.render('addUser');
+// });
