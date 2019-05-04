@@ -122,12 +122,24 @@ const testing = (e) => {
       name.setAttribute( "id", "name")
       console.log('name', name)
       let emailVal = document.createElement('li');
+
       let orgVal = document.createElement('li');
       let cityVal = document.createElement('li');
       let zipVal = document.createElement('li');
       let typVal = document.createElement('li');
-      emailVal.innerHTML = 'Email: ' + item.email
-      emailVal.setAttribute( "id", "emailVal")
+      //setting emails
+      let a = document.createElement('a');
+      var linkText = document.createTextNode("Email: "+item.email)
+      a.appendChild(linkText);
+      a.title = 'Email: ';
+      a.href = item.email
+      a.setAttribute("id", "emailVal");
+      a.setAttribute("href", "mailto:"+item.email);
+      a.setAttribute("target", "_blank")
+
+      //end email
+      // emailVal.innerHTML = 'Email: ' + item.email
+      // emailVal.setAttribute( "id", "emailVal")
       orgVal.innerHTML = ' Group: ' + item.org
       orgVal.setAttribute( "id", "orgVal")
       cityVal.innerHTML = ' Location: ' + item.city
@@ -137,6 +149,8 @@ const testing = (e) => {
       typVal.innerHTML = ' Donation Type: ' + item.type
       typVal.setAttribute( "id", "typVal")
       listItem.appendChild(name)
+      listItem.appendChild(a);
+
       listItem.appendChild(emailVal)
       listItem.appendChild(orgVal)
       listItem.appendChild(cityVal)
