@@ -52,3 +52,13 @@ input {
   margin: auto;
 
 }
+
+li {
+  padding: 5px;
+  list-style-type: none;
+  border-bottom: 1px solid darkorange;
+}
+
+li b {
+  display: block;
+}
