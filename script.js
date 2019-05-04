@@ -3,12 +3,12 @@
   //  validateForm()
   //  e.preventDefault()
 //    console.log('hello')
-   console.log(document.getElementById('firstname').value)
+//    console.log(document.getElementById('firstname').value)
    let firstName = document.getElementById('firstname').value
    let lastName = document.getElementById('lastname').value
    let email = document.getElementById('email').value
    let group = document.getElementById('org').value
-   let type = document.getElementById('type').value
+   let type = document.getElementById('donorType').value
    let city = document.getElementById('city').value
    let zip = document.getElementById('zip').value
 
@@ -19,10 +19,12 @@
      org: group,
      type: type,
      city: city,
-     zip: zip
+     zip: zip,
+     type: type
    }
 
    donors.push(obj)
+   console.log("dsd", type)
    console.log(obj)
    document.getElementById('donorForm').reset();
    donorList();
