@@ -148,7 +148,7 @@ li b {
     width: 10vw;
   }
 }
-@media (min-width: 400px) and (max-width: 640px) {
+@media (max-width: 640px) {
   div.header {
     width: 100%;
     height: 10%;
@@ -207,5 +207,9 @@ li b {
     height: 5vh;
     font-size: 10px;
   }
-
+  #donorList button {
+    height: 15px;
+    font-size: 5px;
+    
+  }
 }
