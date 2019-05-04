@@ -29,14 +29,7 @@
 
 
  }
-//  const validateForm = () => {
-//   let x = document.forms["add_new_donor"]["firstname"].value;
 
-// //   if(x == ''){
-// //     alert("First Name is Required!")
-// //   }
-
-// //  }
  const donorList = () => {
    let current = donors[donors.length-1];
    let textVal = document.createElement('li');
