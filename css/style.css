@@ -69,11 +69,22 @@ input {
   margin: auto;
 
 }
+#donorList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  background: black;
+  padding: 2em;
+  /* grid-template-columns: 50% 50%; */
+  /* grid-template-rows: repeat(auto, 1fr); */
 
+}
 li {
   padding: 5px;
   list-style-type: none;
   border-bottom: 1px solid darkorange;
+  display: grid;
+  background: white;
 }
 
 li b {
