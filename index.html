@@ -11,7 +11,10 @@
 </head>
 <body>
 
-  <h1> Donor List & Donation Inventory </h1>
+  <div class="header">
+    <img class="logo" src="images/careportal-logo.png">
+    <h1> Donor List & Donation Inventory </h1>
+  </div>
 
   <div class="content_container">
     <div id="formWrapper">
@@ -34,7 +37,7 @@
 
         <section>
           <label for="area">Donor Type</label></label>
-          <select name="area">
+          <select id="donorType" name="area">
             <option value="services">Time/Services</option>
             <option value="money">Money</option>
             <option value="items">Items</option>
