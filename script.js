@@ -1,4 +1,4 @@
- const donors = []
+ const donors = [];
  const testing = (e) => {
   //  validateForm()
   //  e.preventDefault()
