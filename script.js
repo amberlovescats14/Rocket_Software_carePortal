@@ -2,7 +2,7 @@ window.onload=function() {
   donorList();
 }
 
- const donors = [{
+const donors = [{
   first: 'Jane',
   last: 'Doe',
   email: 'jdoe@woo.com',

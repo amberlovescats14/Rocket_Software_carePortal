@@ -131,6 +131,7 @@ li b {
 <i class="fas fa-utensils"></i> 
 <i class="fas fa-question-circle"></i>
 */
+
 @media (min-width: 640px) and (max-width: 1080px){
   #formWrapper {
     font-size: 1vh
@@ -152,9 +153,9 @@ li b {
     width: 100%;
     height: 10%;
     display: grid;
-    grid-template-rows: 40% 50%;
+    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
-    border: 2px solid black;
+    /* border: 2px solid black; */
   }
   
   img.logo {
@@ -168,6 +169,8 @@ li b {
     display: grid;
     grid-area: h1;
     grid-row: 2/-1;
+    font-size: 2vh;
+    margin-top: 10px;
   }
   #formWrapper {
     font-size: 1vh;
@@ -180,14 +183,7 @@ li b {
     font-size: 1vh;
 
   }
-  .header {
-    height: 10%;
-    font-size: 2vh;
-  }
-  .logo {
-    height: 100%;
-    width: 100%;
-  }
+
   ul#donorList {
     width: 100%;
     height: 100%;
