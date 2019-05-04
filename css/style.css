@@ -149,6 +149,27 @@ li b {
   }
 }
 @media (min-width: 400px) and (max-width: 640px) {
+  div.header {
+    width: 100%;
+    height: 10%;
+    display: grid;
+    grid-template-rows: 40% 50%;
+    grid-template-columns: none;
+    border: 2px solid black;
+  }
+  
+  img.logo {
+    display: grid;
+    grid-area: logo;
+    grid-row:1/2;
+    width: 60%;
+    margin: auto
+  }
+  h1 {
+    display: grid;
+    grid-area: h1;
+    grid-row: 2/-1;
+  }
   #formWrapper {
     font-size: 1vh;
     padding: 0;
