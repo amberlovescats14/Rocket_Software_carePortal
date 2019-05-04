@@ -8,6 +8,7 @@
    let lastName = document.getElementById('lastname').value
    let email = document.getElementById('email').value
    let group = document.getElementById('org').value
+   let type = document.getElementById('donorType').value
    let city = document.getElementById('city').value
    let zip = document.getElementById('zip').value
    let type = document.getElementById('donorType').value
@@ -26,24 +27,22 @@
     document.getElementById('donorForm').reset();
     donorList();
    }
-  //  console.log("dsd", type)
-  //  console.log(obj)
-   
-   
+
+
  }
  const validateForm = () => {
   let x = document.forms["add_new_donor"]["firstname"].value;
 
-  if(x == ''){
-    alert("First Name is Required!")
-  }
-  
-//  } 
+//   if(x == ''){
+//     alert("First Name is Required!")
+//   }
+
+//  }
  const donorList = () => {
    let current = donors[donors.length-1];
    let textVal = document.createElement('li');
-   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip + ' Donoation Type: ' + current.type
+   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Type: ' + current.type + ' Location: ' + current.city + ' Zip: ' + current.zip
    document.getElementById('donorList').appendChild(textVal)
-  //  console.log(donors) 
+  //  console.log(donors)
  }
  document.getElementById('submit').addEventListener('click', testing)
