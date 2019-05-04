@@ -154,7 +154,7 @@ li b {
     margin: 0;
   }
   #donorForm #typeSelect{
-    width: 100%;
+    width: 50%;
     padding: 2px;
 
   }
@@ -171,12 +171,20 @@ li b {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em;
     overflow: scroll;
+    border: 2px solid black;
   
   }
-  li {
+  ul {
     padding-bottom: 5px;
     list-style-type: none;
     background: white;
+    border: 2px solid black;
+    padding: 0px;
+    margin: 0px;
+  }
+  button#submit {
+    height: 5vh;
+    font-size: 10px;
   }
 
 }
