@@ -8,7 +8,8 @@ window.onload=function() {
   email: 'jdoe@woo.com',
   org: 'Mosaic',
   city: 'Austin',
-  zip: '78727'
+  zip: '78727',
+  type: 'money'
 },
 
 {
@@ -18,6 +19,7 @@ window.onload=function() {
   org: 'Cowboy Church',
   city: 'Arp',
   zip: '78787',
+  type: 'food'
 },
 {
   first: 'Jane',
@@ -25,7 +27,8 @@ window.onload=function() {
   email: 'jfish@woo.com',
   org: 'Clintwood Church',
   city: 'Clintwood',
-  zip: '57832'
+  zip: '57832',
+  type: 'items'
   },
 
 {
@@ -35,6 +38,7 @@ window.onload=function() {
   org: 'Blessed Bay Church',
   city: 'San Francisco',
   zip: '23241',
+  type: 'food'
 },];
 const testing = (e) => {
   //  validateForm()
