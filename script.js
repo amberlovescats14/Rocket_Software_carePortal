@@ -70,7 +70,10 @@ const testing = (e) => {
  }
  const donorList = () => {
    document.getElementById('donorList').innerHTML = ' ';
+   let typeOfDonors = document.getElementById('typeSelect').value
    donors.map((item) => {
+     console.log(item.type + ' ' + typeOfDonors)
+     if(typeOfDonors === item.type){
       let listItem = document.createElement('li')
       let name = document.createElement('b');
       name.innerHTML = item.first + ' ' + item.last
@@ -81,6 +84,8 @@ const testing = (e) => {
       listItem.appendChild(textVal)
       console.log(listItem)
       document.getElementById('donorList').appendChild(listItem)
+     }
+    
    })
   //  let listItem = document.createElement('li')
   //  let name = document.createElement('b');
