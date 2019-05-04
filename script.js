@@ -28,8 +28,8 @@
    }
   //  console.log("dsd", type)
   //  console.log(obj)
-   
-   
+
+
  }
 //  const validateForm = () => {
 //   let x = document.forms["add_new_donor"]["firstname"].value;
@@ -37,13 +37,13 @@
 //   if(x == ''){
 //     alert("First Name is Required!")
 //   }
-  
-//  } 
+
+//  }
  const donorList = () => {
    let current = donors[donors.length-1];
    let textVal = document.createElement('li');
-   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip + ' Donoation Type: ' + current.type
+   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Type: ' + current.type + ' Location: ' + current.city + ' Zip: ' + current.zip
    document.getElementById('donorList').appendChild(textVal)
-  //  console.log(donors) 
+  //  console.log(donors)
  }
  document.getElementById('submit').addEventListener('click', testing)
