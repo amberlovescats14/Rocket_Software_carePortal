@@ -114,21 +114,32 @@ const testing = (e) => {
    document.getElementById('donorList').innerHTML = ' ';
    let typeOfDonors = document.getElementById('typeSelect').value
    donors.map((item) => {
-     console.log(item.type + ' ' + typeOfDonors)
+    //  console.log(item.type + ' ' + typeOfDonors)
      if(typeOfDonors === 'all' || typeOfDonors === item.type){
       let listItem = document.createElement('li')
       let name = document.createElement('b');
       name.innerHTML = item.first + ' ' + item.last
-      console.log('name', name)
+      // console.log('name', name)
       let textVal = document.createElement('p');
       textVal.innerHTML = 'Email: ' + item.email + ' Group: ' + item.org + ' Location: ' + item.city + ' Zip: ' + item.zip + ' Donoation Type: ' + item.type
+      let removeButton = document.createElement('button')
+      removeButton.innerHTML = "Delete"
+      removeButton.setAttribute('id', `${donors.indexOf(item)}`)
+      removeButton.onclick = deleteItem
       listItem.appendChild(name)
       listItem.appendChild(textVal)
-      console.log(listItem)
+      listItem.appendChild(removeButton)
+      // console.log(listItem)
       document.getElementById('donorList').appendChild(listItem)
      }
     
    })
 
+ }
+ const deleteItem = (e) => {
+  //  e.target.parentNode.remove(e.target);
+   console.log("button", e.target.id)
+   donors.splice(e.target.id, 1)
+   donorList();
  }
  document.getElementById('submit').addEventListener('click', testing)
