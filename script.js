@@ -8,7 +8,6 @@
    let lastName = document.getElementById('lastname').value
    let email = document.getElementById('email').value
    let group = document.getElementById('org').value
-   let type = document.getElementById('donorType').value
    let city = document.getElementById('city').value
    let zip = document.getElementById('zip').value
    let type = document.getElementById('donorType').value
