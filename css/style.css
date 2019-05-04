@@ -75,7 +75,6 @@ input {
   /* background: black; */
   padding: 2em;
 
-
 }
 li {
   padding: 5px;
@@ -87,6 +86,10 @@ li {
 li b {
   display: block;
   margin-bottom: 15px;
+}
+.list-container {
+  overflow: scroll;
+  height: 100vh;
 }
 
 #typeSelect, #donorType {
