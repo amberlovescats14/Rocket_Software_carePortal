@@ -72,7 +72,7 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
-  background: black;
+  /* background: black; */
   padding: 2em;
 
 
