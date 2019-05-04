@@ -27,7 +27,6 @@
     donorList();
    }
  }
- 
  const donorList = () => {
    let current = donors[donors.length-1];
    let listItem = document.createElement('li')
