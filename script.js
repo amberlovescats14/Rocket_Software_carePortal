@@ -8,7 +8,8 @@ window.onload=function() {
   email: 'jdoe@woo.com',
   org: 'Mosaic',
   city: 'Austin',
-  zip: '78727'
+  zip: '78727',
+  type: 'money'
 },
 {
   first: 'Keith',
@@ -17,6 +18,7 @@ window.onload=function() {
   org: 'Cowboy Church',
   city: 'Arp',
   zip: '78787',
+  type: 'food'
 },
 {
   first: 'Jane',
@@ -25,6 +27,10 @@ window.onload=function() {
   org: 'Clintwood Church',
   city: 'Clintwood',
   zip: '57832',
+<<<<<<< HEAD
+=======
+  type: 'items'
+>>>>>>> be9fd9f389515c07d6803a3cace2eb6273963cfe
   },
 {
   first: 'Mary',
@@ -33,6 +39,7 @@ window.onload=function() {
   org: 'Blessed Bay Church',
   city: 'San Francisco',
   zip: '23241',
+  type: 'food'
 },];
 const testing = (e) => {
   //  validateForm()
@@ -64,7 +71,10 @@ const testing = (e) => {
  }
  const donorList = () => {
    document.getElementById('donorList').innerHTML = ' ';
+   let typeOfDonors = document.getElementById('typeSelect').value
    donors.map((item) => {
+     console.log(item.type + ' ' + typeOfDonors)
+     if(typeOfDonors === item.type){
       let listItem = document.createElement('li')
       let name = document.createElement('b');
       name.innerHTML = item.first + ' ' + item.last
@@ -75,17 +85,9 @@ const testing = (e) => {
       listItem.appendChild(textVal)
       console.log(listItem)
       document.getElementById('donorList').appendChild(listItem)
+     }
+
    })
-  //  let listItem = document.createElement('li')
-  //  let name = document.createElement('b');
-  //  name.innerHTML = current.first + ' ' + current.last
-  //  let textVal = document.createElement('p');
-  //  textVal.innerHTML = 'Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip + ' Donoation Type: ' + current.type
-  //  listItem.appendChild(name)
-  //  listItem.appendChild(textVal)
-  //  console.log(listItem)
-  //  document.getElementById('donorList').appendChild(listItem)
-  //  document.getElementById('donorList').appendChild(textVal)
-  //  console.log(donors)
+
  }
  document.getElementById('submit').addEventListener('click', testing)
