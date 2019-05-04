@@ -5,7 +5,7 @@ const donors = [
       first: 'Jane',
       last: 'Doe',
       email: 'jdoe@woo.com',
-      org: 'Mosiac',
+      org: 'Mosaic',
       city: 'Austin',
       zip: '78727'
     },

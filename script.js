@@ -1,26 +1,34 @@
+ const donors = [];
  const testing = (e) => {
   //  validateForm()
   //  e.preventDefault()
 //    console.log('hello')
-   console.log(document.getElementById('firstname').value)
+//    console.log(document.getElementById('firstname').value)
    let firstName = document.getElementById('firstname').value
    let lastName = document.getElementById('lastname').value
    let email = document.getElementById('email').value
    let group = document.getElementById('org').value
    let city = document.getElementById('city').value
    let zip = document.getElementById('zip').value
-   
-   let obj = {
-     first: firstName,
-     last: lastName,
-     email: email,
-     org: group,
-     city: city,
-     zip: zip
+   let type = document.getElementById('donorType').value
+   if(firstName && lastName && email && group && city && zip && type){
+     console.log('help im a computer')
+     let obj = {
+      first: firstName,
+      last: lastName,
+      email: email,
+      org: group,
+      city: city,
+      zip: zip,
+      type: type
+    }
+    donors.push(obj)
+    document.getElementById('donorForm').reset();
+    donorList();
    }
-  //  donors.push(obj)
-  console.log(obj)
-   donorList(obj);
+  //  console.log("dsd", type)
+  //  console.log(obj)
+   
    
  }
 //  const validateForm = () => {
@@ -30,11 +38,12 @@
 //     alert("First Name is Required!")
 //   }
   
-//  }
- const donorList = (obj) => {
+//  } 
+ const donorList = () => {
+   let current = donors[donors.length-1];
    let textVal = document.createElement('li');
-   textVal.innerHTML = obj.first + ' ' + obj.last + ' ' + obj.email + ' ' + obj.org + ' ' + obj.city + ' ' + obj.zip
+   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip + ' Donoation Type: ' + current.type
    document.getElementById('donorList').appendChild(textVal)
-
+  //  console.log(donors) 
  }
  document.getElementById('submit').addEventListener('click', testing)
