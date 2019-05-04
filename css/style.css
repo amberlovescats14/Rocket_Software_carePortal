@@ -88,3 +88,9 @@ li b {
   display: block;
   margin-bottom: 15px;
 }
+
+#typeSelect, #donorType {
+  margin: 0 auto;
+  outline: none;
+  width: 250px;
+}
