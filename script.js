@@ -1,3 +1,4 @@
+ const donors = []
  const testing = (e) => {
    e.preventDefault()
    console.log('hello')
@@ -17,15 +18,17 @@
      city: city,
      zip: zip
    }
-  //  donors.push(obj)
-  console.log(obj)
-   donorList(obj);
+   donors.push(obj)
+   console.log(obj)
+   document.getElementById('donorForm').reset();
+   listDonors();
    
  }
- const donorList = (obj) => {
+ const listDonors = () => {
+   let current = donors[donors.length-1]
    let textVal = document.createElement('li');
-   textVal.innerHTML = obj.first + ' ' + obj.last + ' ' + obj.email + ' ' + obj.org + ' ' + obj.city + ' ' + obj.zip
+   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip
    document.getElementById('donorList').appendChild(textVal)
-
+   console.log(donors) 
  }
  document.getElementById('submit').addEventListener('click', testing)
