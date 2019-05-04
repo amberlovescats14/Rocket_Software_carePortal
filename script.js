@@ -116,23 +116,41 @@ const testing = (e) => {
    donors.map((item) => {
     //  console.log(item.type + ' ' + typeOfDonors)
      if(typeOfDonors === 'all' || typeOfDonors === item.type){
-      let listItem = document.createElement('li')
-      let name = document.createElement('b');
+      let listItem = document.createElement('ul')
+      let name = document.createElement('li');
       name.innerHTML = item.first + ' ' + item.last
-      // console.log('name', name)
-      let textVal = document.createElement('p');
-      textVal.innerHTML = 'Email: ' + item.email + ' Group: ' + item.org + ' Location: ' + item.city + ' Zip: ' + item.zip + ' Donoation Type: ' + item.type
       let removeButton = document.createElement('button')
       removeButton.innerHTML = "Delete"
       removeButton.setAttribute('id', `${donors.indexOf(item)}`)
       removeButton.onclick = deleteItem
+      name.setAttribute( "id", "name")
+      console.log('name', name)
+      let emailVal = document.createElement('li');
+      let orgVal = document.createElement('li');
+      let cityVal = document.createElement('li');
+      let zipVal = document.createElement('li');
+      let typVal = document.createElement('li');
+      emailVal.innerHTML = 'Email: ' + item.email
+      emailVal.setAttribute( "id", "emailVal")
+      orgVal.innerHTML = ' Group: ' + item.org
+      orgVal.setAttribute( "id", "orgVal")
+      cityVal.innerHTML = ' Location: ' + item.city
+      cityVal.setAttribute( "id", "cityVal")
+      zipVal.innerHTML = ' Zip: ' + item.zip
+      zipVal.setAttribute( "id", "zipVal")
+      typVal.innerHTML = ' Donation Type: ' + item.type
+      typVal.setAttribute( "id", "typVal")
       listItem.appendChild(name)
-      listItem.appendChild(textVal)
+      listItem.appendChild(emailVal)
+      listItem.appendChild(orgVal)
+      listItem.appendChild(cityVal)
+      listItem.appendChild(zipVal)
+      listItem.appendChild(typVal)
       listItem.appendChild(removeButton)
-      // console.log(listItem)
+      console.log(listItem)
       document.getElementById('donorList').appendChild(listItem)
      }
-    
+
    })
 
  }
@@ -143,3 +161,4 @@ const testing = (e) => {
    donorList();
  }
  document.getElementById('submit').addEventListener('click', testing)
+//  document.getElementById('submit').addEventListener('click', testing)
