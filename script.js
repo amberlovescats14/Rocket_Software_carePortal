@@ -10,6 +10,7 @@
    let group = document.getElementById('org').value
    let city = document.getElementById('city').value
    let zip = document.getElementById('zip').value
+   let type = document.getElementById('donorType').value
    
    let obj = {
      first: firstName,
@@ -17,9 +18,11 @@
      email: email,
      org: group,
      city: city,
-     zip: zip
+     zip: zip,
+     type: type
    }
    donors.push(obj)
+   console.log("dsd", type)
    console.log(obj)
    document.getElementById('donorForm').reset();
    donorList();
@@ -36,7 +39,7 @@
  const donorList = () => {
    let current = donors[donors.length-1];
    let textVal = document.createElement('li');
-   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip
+   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip + ' Donoation Type: ' + current.type
    document.getElementById('donorList').appendChild(textVal)
    console.log(donors) 
  }
