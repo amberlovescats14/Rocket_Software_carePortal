@@ -1,5 +1,42 @@
- const donors = [];
- const testing = (e) => {
+window.onload=function() {
+  donorList();
+}
+
+ const donors = [{
+  first: 'Jane',
+  last: 'Doe',
+  email: 'jdoe@woo.com',
+  org: 'Mosaic',
+  city: 'Austin',
+  zip: '78727'
+},
+
+{
+  first: 'Keith',
+  last: 'Hym',
+  email: 'keith@voo.com',
+  org: 'Cowboy Church',
+  city: 'Arp',
+  zip: '78787',
+},
+{
+  first: 'Jane',
+  last: 'Fish',
+  email: 'jfish@woo.com',
+  org: 'Clintwood Church',
+  city: 'Clintwood',
+  zip: '57832'
+  },
+
+{
+  first: 'Mary',
+  last: 'Hym',
+  email: 'maryH@voo.com',
+  org: 'Blessed Bay Church',
+  city: 'San Francisco',
+  zip: '23241',
+},];
+const testing = (e) => {
   //  validateForm()
   //  e.preventDefault()
 //    console.log('hello')
@@ -29,16 +66,28 @@
  }
  
  const donorList = () => {
-   let current = donors[donors.length-1];
-   let listItem = document.createElement('li')
-   let name = document.createElement('b');
-   name.innerHTML = current.first + ' ' + current.last
-   let textVal = document.createElement('p');
-   textVal.innerHTML = 'Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip + ' Donoation Type: ' + current.type
-   listItem.appendChild(name)
-   listItem.appendChild(textVal)
-   console.log(listItem)
-   document.getElementById('donorList').appendChild(listItem)
+   document.getElementById('donorList').innerHTML = ' ';
+   donors.map((item) => {
+      let listItem = document.createElement('li')
+      let name = document.createElement('b');
+      name.innerHTML = item.first + ' ' + item.last
+      console.log('name', name)
+      let textVal = document.createElement('p');
+      textVal.innerHTML = 'Email: ' + item.email + ' Group: ' + item.org + ' Location: ' + item.city + ' Zip: ' + item.zip + ' Donoation Type: ' + item.type
+      listItem.appendChild(name)
+      listItem.appendChild(textVal)
+      console.log(listItem)
+      document.getElementById('donorList').appendChild(listItem)
+   })
+  //  let listItem = document.createElement('li')
+  //  let name = document.createElement('b');
+  //  name.innerHTML = current.first + ' ' + current.last
+  //  let textVal = document.createElement('p');
+  //  textVal.innerHTML = 'Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip + ' Donoation Type: ' + current.type
+  //  listItem.appendChild(name)
+  //  listItem.appendChild(textVal)
+  //  console.log(listItem)
+  //  document.getElementById('donorList').appendChild(listItem)
   //  document.getElementById('donorList').appendChild(textVal)
   //  console.log(donors) 
  }
