@@ -113,35 +113,3 @@ li b {
 <i class="fas fa-utensils"></i> 
 <i class="fas fa-question-circle"></i>
 */
-
-@media(min-width: 350px) {
-  .content_container {
-    margin: 0 auto;
-    min-height: 100%;
-    display: grid;
-    grid-template-columns: 30vw 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    font-size: 2vh;
-  }
-  input {
-    font-size: 1vh;
-    font-weight: 800;
-  }
-  #donorList {
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: 1;
-    grid-gap: 1em;
-    /* background: black; */
-  
-  
-  }
-  li {
-    padding: 5px;
-    list-style-type: none;
-    border-bottom: 1px solid #F26631;
-    background: white;
-    background: whitesmoke;
-  }
-}
