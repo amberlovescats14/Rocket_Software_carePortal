@@ -1,6 +1,6 @@
  const donors = [];
  const testing = (e) => {
-   validateForm()
+  //  validateForm()
   //  e.preventDefault()
 //    console.log('hello')
 //    console.log(document.getElementById('firstname').value)
