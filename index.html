@@ -27,7 +27,6 @@
           <label for="email">Email</label>
           <input type="email" name="email" id="email" placeholder="john@doe.com" required>
         </section>
-
         <section id="group">
           <label for="org">Organization</label>
           <input type="text" name="org" id="org" placeholder="Mosaic Church" required>
@@ -52,16 +51,14 @@
 
         <button  id="submit">Add New Donor</button>
       </form>
-      </div>
+    </div>
 
+    <div class="list-container">
+      <ul id ="donorList">
+        <!-- Emilio render donors here -->
+      </ul>
+    </div>
 
-      <div class="list-container">
-        <ul id ="donorList">
-          <!-- <script>
-            donors.map((donor)=> render(<li> {donor.first} </li>))
-          </script> -->
-        </ul>
-      </div>
   </div>
 
   <script src="./script.js"></script>
