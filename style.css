@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
+=======
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+>>>>>>> e7e79a0d2ca30b7fa98b13417552be5141b58047
 h1 {
   background: orangered;
   text-align: center;
