@@ -68,11 +68,20 @@ input {
   margin: auto;
 
 }
+#donorList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  background: black;
+  padding: 2em;
 
+
+}
 li {
   padding: 5px;
   list-style-type: none;
   border-bottom: 1px solid #F26631;
+  background: white;
 }
 
 li b {

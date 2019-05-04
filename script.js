@@ -64,7 +64,6 @@ const testing = (e) => {
     donorList();
    }
  }
- 
  const donorList = () => {
    document.getElementById('donorList').innerHTML = ' ';
    donors.map((item) => {
