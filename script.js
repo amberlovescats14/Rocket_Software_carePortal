@@ -9,9 +9,8 @@ window.onload=function() {
   org: 'Mosaic',
   city: 'Austin',
   zip: '78727',
-  type: 'money'
+  type: 'Money'
 },
-
 {
   first: 'Keith',
   last: 'Hym',
@@ -19,7 +18,7 @@ window.onload=function() {
   org: 'Cowboy Church',
   city: 'Arp',
   zip: '78787',
-  type: 'food'
+  type: 'Services'
 },
 {
   first: 'Jane',
@@ -28,9 +27,8 @@ window.onload=function() {
   org: 'Clintwood Church',
   city: 'Clintwood',
   zip: '57832',
-  type: 'items'
+  type: 'Items'
   },
-
 {
   first: 'Mary',
   last: 'Hym',
@@ -38,7 +36,7 @@ window.onload=function() {
   org: 'Blessed Bay Church',
   city: 'San Francisco',
   zip: '23241',
-  type: 'food'
+  type: 'Food'
 },
 {
   first: 'Heather',
@@ -84,12 +82,11 @@ window.onload=function() {
   city: 'Pfluggerville',
   zip: '78223',
   type: 'Money'
-},];
+},
+];
 const testing = (e) => {
   //  validateForm()
   //  e.preventDefault()
-//    console.log('hello')
-//    console.log(document.getElementById('firstname').value)
    let firstName = document.getElementById('firstname').value
    let lastName = document.getElementById('lastname').value
    let email = document.getElementById('email').value
