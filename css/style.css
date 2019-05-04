@@ -7,15 +7,22 @@ h1 {
   text-align: center;
   color: white;
 }
+
 #formWrapper {
   background: grey;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
-section {
+  section   {
   color: white;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
 
 }
 
