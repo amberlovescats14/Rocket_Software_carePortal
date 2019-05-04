@@ -95,7 +95,6 @@ const testing = (e) => {
    let zip = document.getElementById('zip').value
    let type = document.getElementById('donorType').value
    if(firstName && lastName && email && group && city && zip && type){
-     console.log('help im a computer')
      let obj = {
       first: firstName,
       last: lastName,
@@ -105,7 +104,7 @@ const testing = (e) => {
       zip: zip,
       type: type
     }
-    donors.push(obj)
+    donors.unshift(obj)
     document.getElementById('donorForm').reset();
     donorList();
    }
