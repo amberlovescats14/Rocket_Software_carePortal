@@ -148,6 +148,24 @@ li b {
   }
 }
 @media (min-width: 400px) and (max-width: 640px) {
+  .header {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 40%;
+    grid-template-columns: none;
+  }
+  
+  .logo {
+    display: grid;
+    grid-area: logo;
+    grid-row:1/2;
+  }
+  h1 {
+    display: grid;
+    grid-area: h1;
+    grid-row: 2/-1;
+    
+  }
   #formWrapper {
     font-size: 1vh;
     padding: 0;
