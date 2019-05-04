@@ -3,7 +3,7 @@ html, body {
 }
 
 h1 {
-  background: orangered;
+  background: #F26631;
   text-align: center;
   color: white;
 }
@@ -37,11 +37,6 @@ input {
   padding: 5px;
   border: 1px solid gray;
   margin-bottom: 10px;
-}
-
-#buttonWrapper {
-  width: 100%;
-  padding: 5px;
 }
 
 #submit {

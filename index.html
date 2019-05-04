@@ -18,33 +18,33 @@
           <!-- adding a new donor - form-->
         <section id="contact">
           <label for="firstname">First Name</label>
-          <input type="text" name="firstname" id="firstname" placeholder="John">
+          <input type="text" name="firstname" id="firstname" placeholder="John" required>
           
           <label for="lastname">Last Name</label>
-          <input type="text" name="lastname" id="lastname" placeholder="Doe">
+          <input type="text" name="lastname" id="lastname" placeholder="Doe" required >
     
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="john@doe.com">
+          <input type="email" name="email" id="email" placeholder="john@doe.com" required>
         </section>
        
         <section id="group">
           <label for="org">Organization</label>
-          <input type="text" name="org" id="org" placeholder="Mosiac Church">
+          <input type="text" name="org" id="org" placeholder="Mosiac Church" required>
         </section>
         
         <section id="geo">
           <label for="location">Location</label>
-          <input type="text" name="city" id="city" placeholder="Austin">
+          <input type="text" name="city" id="city" placeholder="Austin" required>
           <input type="text" name="zip" id="zip" placeholder="78727">
         </section>
         
-        <button  id="submit">Add New Donor</button>
+        <button id="submit" type="submit">Add New Donor</button>
       </form>
       </div>
     
     
       <div class="list-container">
-        <ul id="list">
+        <ul id ="donorList">
           <!-- Emilio render donors here -->
         </ul>
       </div>
@@ -52,4 +52,5 @@
   
   <script src="./script.js"></script>
 </body>
+<script type="text/babel" src="script.js"></script>
 </html>
