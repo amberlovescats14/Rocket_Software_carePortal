@@ -1,21 +1,7 @@
-<<<<<<< HEAD:style.css
-=======
-<<<<<<< HEAD:style.css
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-=======
->>>>>>> d110a4b43f183a06d625df2aa0167c4b136c9b75:css/style.css
 html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-<<<<<<< HEAD:style.css
-=======
->>>>>>> 67155ee5d31996238253622d12d2f5d70114d44a:css/style.css
->>>>>>> d110a4b43f183a06d625df2aa0167c4b136c9b75:css/style.css
 h1 {
   background: orangered;
   text-align: center;
@@ -25,24 +11,18 @@ h1 {
 #formWrapper {
   background: grey;
   width: 50%;
-<<<<<<< HEAD:style.css
   display: flex;
   flex-direction: column;
   margin: auto;
   padding: 20px;
-=======
->>>>>>> d110a4b43f183a06d625df2aa0167c4b136c9b75:css/style.css
 }
-section {
+  section   {
   color: white;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD:style.css
   justify-content: center;
-=======
->>>>>>> d110a4b43f183a06d625df2aa0167c4b136c9b75:css/style.css
 }
 #buttonWrapper {
   width: 100%;
