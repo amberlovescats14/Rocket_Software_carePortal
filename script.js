@@ -39,7 +39,7 @@
  const donorList = () => {
    let current = donors[donors.length-1];
    let textVal = document.createElement('li');
-   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Location: ' + current.city + ' Zip: ' + current.zip
+   textVal.innerHTML = current.first + ' ' + current.last + ' Email: ' + current.email + ' Group: ' + current.org + ' Type: ' + current.type + ' Location: ' + current.city + ' Zip: ' + current.zip
    document.getElementById('donorList').appendChild(textVal)
    console.log(donors)
  }
