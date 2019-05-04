@@ -114,11 +114,15 @@ const testing = (e) => {
    document.getElementById('donorList').innerHTML = ' ';
    let typeOfDonors = document.getElementById('typeSelect').value
    donors.map((item) => {
-     console.log(item.type + ' ' + typeOfDonors)
+    //  console.log(item.type + ' ' + typeOfDonors)
      if(typeOfDonors === 'all' || typeOfDonors === item.type){
       let listItem = document.createElement('ul')
       let name = document.createElement('li');
       name.innerHTML = item.first + ' ' + item.last
+      let removeButton = document.createElement('button')
+      removeButton.innerHTML = "Delete"
+      removeButton.setAttribute('id', `${donors.indexOf(item)}`)
+      removeButton.onclick = deleteItem
       name.setAttribute( "id", "name")
       console.log('name', name)
       let emailVal = document.createElement('li');
@@ -156,6 +160,7 @@ const testing = (e) => {
       listItem.appendChild(cityVal)
       listItem.appendChild(zipVal)
       listItem.appendChild(typVal)
+      listItem.appendChild(removeButton)
       console.log(listItem)
       document.getElementById('donorList').appendChild(listItem)
      }
@@ -163,4 +168,11 @@ const testing = (e) => {
    })
 
  }
+ const deleteItem = (e) => {
+  //  e.target.parentNode.remove(e.target);
+   console.log("button", e.target.id)
+   donors.splice(e.target.id, 1)
+   donorList();
+ }
  document.getElementById('submit').addEventListener('click', testing)
+//  document.getElementById('submit').addEventListener('click', testing)

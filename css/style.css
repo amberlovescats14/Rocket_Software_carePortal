@@ -74,7 +74,7 @@ input {
   grid-gap: 1em;
   /* background: black; */
   padding: 2em;
-
+  overflow: scroll;
 
 }
 li {
@@ -82,17 +82,27 @@ li {
   list-style-type: none;
   border-bottom: 1px solid #F26631;
   background: white;
+  background: whitesmoke;
 }
 
 li b {
   display: block;
   margin-bottom: 15px;
 }
+.list-container {
+  overflow: scroll;
+  height: 100vh;
+}
 
 #typeSelect, #donorType {
-  margin: 0 auto;
   outline: none;
-  width: 250px;
+  min-width: 150px;
+  float: left;
+}
+
+#typeSelect {
+  margin: 0 auto;
+  width: 150px;
 }
 
 /* Jonny's Icons */
@@ -103,4 +113,3 @@ li b {
 <i class="fas fa-utensils"></i> 
 <i class="fas fa-question-circle"></i>
 */
-
