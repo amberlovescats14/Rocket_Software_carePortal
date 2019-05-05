@@ -114,7 +114,9 @@ const testing = (e) => {
    let typeOfDonors = document.getElementById('typeSelect').value
    donors.map((item) => {
     //  console.log(item.type + ' ' + typeOfDonors)
-     if(typeOfDonors === 'all' || typeOfDonors === item.type){
+     let bool = false;
+     
+    //  if(typeOfDonors === 'all' ||true){
       let listItem = document.createElement('ul')
       listItem.setAttribute('id',`${donors.indexOf(item)}`)
       listItem.setAttribute('contenteditable', 'false')
@@ -168,12 +170,20 @@ const testing = (e) => {
       listItem.appendChild(typVal)
       listItem.appendChild(removeButton)
       listItem.appendChild(editButton)
-      // console.log(listItem)
-      document.getElementById('donorList').appendChild(listItem)
-     }
+      document.getElementById('donorList').appendChild(listItem);
+
+      $(`#${donors.indexOf(item)}`).each(function(index){
+        console.log(item.first + ' '+ index + ": " + $(this).text())
+        if($(this).text().includes(typeOfDonors)){
+          bool = true;
+        }
+      })
+      console.log("Bool", bool)
+      if(!bool && typeOfDonors !== 'all'){
+        document.getElementById('donorList').removeChild(listItem);
+      }
 
    })
-
  }
  const deleteItem = (e) => {
   //  e.target.parentNode.remove(e.target);

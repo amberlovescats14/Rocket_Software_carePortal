@@ -59,25 +59,22 @@
     </div>
 
     <div class="list-container">
-
-
-      <!-- ///form  -->
-      <div id="searching">
-        <input type="text" id="s" placeholder="Search">
-        <button class="submit" onclick="search()">X</button>
-      </div>
-      <!-- ///// -->
-        <section>
-            <label for="area">Donor Type</label></label>
-            <select id="typeSelect" onchange="donorList()" type="button" name="area">
-                <option value="all">Show All</option>
-                <option value="Services">Services</option>
-                <option value="Money">Money</option>
-                <option value="Items">Items</option>
-                <option value="Food">Food</option>
-                <option value="Other">Other</option>
-            </select>
-        </section>
+      <section id="search">
+        <input type="text" id="bar" placeholder="Search...">
+        <input type="submit" id="btn"value="Go">
+      </section>
+      <section>
+        <label for="area">Donor Type</label>
+          <select id="typeSelect" onchange="donorList()" name="area">
+            <option value="all">Show All</option>
+            <option value="Services">Services</option>
+            <option value="Money">Money</option>
+            <option value="Items">Items</option>
+            <option value="Food">Food</option>
+            <option value="Other">Other</option>
+        </select>
+      </section>
+      
       <ul id="donorList">
         <!-- Emilio render donors here -->
       </ul>
