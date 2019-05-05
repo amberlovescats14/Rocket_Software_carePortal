@@ -1,4 +1,4 @@
-*{
+* {
   font-family: 'Roboto', sans-serif;
   margin: 0px;
   padding: 0px;
@@ -15,7 +15,11 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+a {
+  color: #F26631;
 }
 
 .header {
@@ -64,15 +68,20 @@ section   {
 input {
   padding: 5px;
   border: 1px solid gray;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+#addUserIcon {
+  margin-right: 5px;
 }
 
 #submit {
   width: 100%;
   background: black;
   color: white;
-  font-weight: 800;
+  font-weight: 700;
   border-radius: 5px;
+  padding: 10px;
   border: none;
   margin: auto;
 }
@@ -81,23 +90,28 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
-  /* background: black; */
-  padding: 2em;
+  padding: 0 2em 4em;
   overflow: scroll;
 
 }
+
+#donorList > ul {
+  border: 1px solid hsl(0, 0%, 90%);
+  border-bottom: 5px solid hsl(0, 0%, 90%);
+  padding: 20px;
+}
+
 li {
   padding-bottom: 5px;
   list-style-type: none;
-  /* border-bottom: 1px solid #F26631; */
   background: white;
-  /* background: whitesmoke; */
 }
 
 li:first-child {
   border-bottom: 2px solid #F26631;
   margin-bottom: 10px;
   /* background: whitesmoke; */
+  font-size: 20px;
 }
 
 li b {

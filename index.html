@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://careportal.org/wp-content/uploads/2019/02/iphone.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <title>Donation Center</title>
 </head>
 <body>
@@ -31,6 +31,7 @@
           <label for="email">Email</label>
           <input type="email" name="email" id="email" placeholder="john@doe.com" required>
         </section>
+
         <section id="group">
           <label for="org">Organization</label>
           <input type="text" name="org" id="org" placeholder="Mosaic Church" required>
@@ -45,7 +46,6 @@
             <option value="Food">Food</option>
             <option value="Other">Other</option>
           </select>
-          
         </section>
 
         <section id="geo">
@@ -54,7 +54,7 @@
           <input type="text" name="zip" id="zip" placeholder="78727">
         </section>
 
-        <button  id="submit">Add New Donor</button>
+        <button onclick="donorList()" id="submit"><i id="addUserIcon" class="fas fa-user-plus"></i>Add New Donor</button>
       </form>
     </div>
 
@@ -76,7 +76,10 @@
     </div>
 
   </div>
-
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   <script src="./script.js"></script>
 
 </body>
