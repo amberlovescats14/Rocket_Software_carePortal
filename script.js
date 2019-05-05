@@ -181,13 +181,12 @@ const testing = (e) => {
       detailVal.setAttribute('id', 'detailContent')
       listItem.appendChild(name)
       listItem.appendChild(typVal)
+      listItem.appendChild(typVal)
       listItem.appendChild(a);
-
       listItem.appendChild(emailVal)
       listItem.appendChild(orgVal)
       listItem.appendChild(cityVal)
       listItem.appendChild(zipVal)
-      listItem.appendChild(typVal)
       listItem.appendChild(detailVal)
       // console.log(detailVal)
 
@@ -231,6 +230,7 @@ const testing = (e) => {
     donors[targetId].org = document.getElementById(targetId).childNodes[4].textContent.split(':')[1].trim()
     donors[targetId].city = document.getElementById(targetId).childNodes[5].textContent.split(':')[1].trim()
     donors[targetId].zip = document.getElementById(targetId).childNodes[6].textContent.split(':')[1].trim()
+    donors[targetId].details = document.getElementById(targetId).childNodes[7].textContent.split(':')[1].trim()
     // document.getElementById(targetId).childNodes[6].setAttribute('value', `${donors[targetId].type}`)
     // console.log(donors[targetId].type.trim())
     // console.log(donors[targetId])
