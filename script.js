@@ -128,7 +128,7 @@ const testing = (e) => {
       editButton.innerHTML = 'Edit'
       editButton.onclick = editItem
       name.setAttribute( "id", "name")
-      console.log('name', name)
+      // console.log('name', name)
       let emailVal = document.createElement('li');
       let orgVal = document.createElement('li');
       let cityVal = document.createElement('li');
@@ -140,7 +140,9 @@ const testing = (e) => {
       a.appendChild(linkText);
       a.title = 'Email: ';
       a.href = item.email
-      a.setAttribute("id", "emailVal");
+      a.setAttribute("id", 'emailVal');
+      // let r = donors.indexOf(item)
+      // console.log(a, document.getElementById(`emailVal${donors.indexOf(item)}`), `emailVal${r}`)
       a.setAttribute("href", "mailto:"+item.email);
       a.setAttribute("target", "_blank")
 
@@ -148,7 +150,8 @@ const testing = (e) => {
       // emailVal.innerHTML = 'Email: ' + item.email
       // emailVal.setAttribute( "id", "emailVal")
       orgVal.innerHTML = ' Group: ' + item.org
-      orgVal.setAttribute( "id", "orgVal")
+      orgVal.setAttribute( "id", 'orgVal')
+      // console.log(orgVal.getAttribute('id'),'sd')
       cityVal.innerHTML = ' Location: ' + item.city
       cityVal.setAttribute( "id", "cityVal")
       zipVal.innerHTML = ' Zip: ' + item.zip
@@ -165,7 +168,7 @@ const testing = (e) => {
       listItem.appendChild(typVal)
       listItem.appendChild(removeButton)
       listItem.appendChild(editButton)
-      console.log(listItem)
+      // console.log(listItem)
       document.getElementById('donorList').appendChild(listItem)
      }
 
@@ -179,20 +182,30 @@ const testing = (e) => {
    donorList();
  }
  const editItem = (e) => {
-  console.log("button", e.target.parentNode.id)
+  // console.log("button", e.target.parentNode.id)
   let targetId = e.target.parentNode.id
   let blah = document.getElementById(targetId)
   if(blah.contentEditable === 'true'){
     e.target.innerHTML = 'Edit'
     blah.setAttribute('contenteditable', 'false')
+    let nameArr =document.getElementById(targetId).childNodes[0].textContent.split(' ')
+    donors[targetId].first = nameArr[0]
+    donors[targetId].last = nameArr[1]
+    donors[targetId].email = document.getElementById(targetId).childNodes[1].textContent.split(':')[1].trim()
+    donors[targetId].org = document.getElementById(targetId).childNodes[3].textContent.split(':')[1].trim()
+    donors[targetId].city = document.getElementById(targetId).childNodes[4].textContent.split(':')[1].trim()
+    donors[targetId].zip = document.getElementById(targetId).childNodes[5].textContent.split(':')[1].trim()
+    donors[targetId].type = document.getElementById(targetId).childNodes[6].textContent.split(':')[1].trim()
+    // document.getElementById(targetId).childNodes[6].setAttribute('value', `${donors[targetId].type}`)
+    console.log(donors[targetId].type.trim())
+    console.log(donors[targetId])
+    // console.log(donors[targetId].zip)
+    // console.log(donors[targetId])
     
   }else{
     e.target.innerHTML = 'Save'
     blah.setAttribute('contenteditable', 'true')
   }
-  // console.log(typeof(blah.contentEditable))
-  // blah.setAttribute('contenteditable', !blah.contentEditable)
-  // console.log(blah.contentEditable)
  }
  document.getElementById('submit').addEventListener('click', testing)
 //  document.getElementById('submit').addEventListener('click', testing)
