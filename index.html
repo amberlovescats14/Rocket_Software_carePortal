@@ -46,6 +46,7 @@
             <option value="Food">Food</option>
             <option value="Other">Other</option>
           </select>
+          <input type="text" placeholder="bed, dresser, roofing, etc ..." id="details">
         </section>
 
         <section id="geo">
@@ -54,29 +55,32 @@
           <input type="text" name="zip" id="zip" placeholder="78727">
         </section>
 
-        <button onclick="donorList()" id="submit"><i id="addUserIcon" class="fas fa-user-plus"></i>Add New Donor</button>
+        <button onsubmit="donorList()" id="submit"><i id="addUserIcon" class="fas fa-user-plus"></i>Add New Donor</button>
       </form>
     </div>
 
     <div class="list-container">
-      <section id="search">
-        <input type="text" id="bar" placeholder="Search...">
-        <input type="submit" id="btn"value="Go" onclick="donorList()">
-      </section>
-      <section>
-        <label for="area">Donor Type</label>
-          <select id="typeSelect" onchange="donorList()" name="area">
-            <option value="all">Show All</option>
-            <option value="Services">Services</option>
-            <option value="Money">Money</option>
-            <option value="Items">Items</option>
-            <option value="Food">Food</option>
-            <option value="Other">Other</option>
-        </select>
-      </section>
+      <div class="search-filter">
+        <section id="search">
+            <input type="text" id="bar" placeholder="Search...">
+            <input type="submit" id="btn"value="Go" onclick="donorList()">
+          </section>
+          <section>
+            <label for="area">Donor Type</label>
+              <select id="typeSelect" onchange="donorList()" name="area">
+                <option value="all">Show All</option>
+                <option value="Services">Services</option>
+                <option value="Money">Money</option>
+                <option value="Items">Items</option>
+                <option value="Food">Food</option>
+                <option value="Other">Other</option>
+            </select>
+          </section>
+      </div>
+
       
       <ul id="donorList">
-        <!-- Emilio render donors here -->
+        <!-- render donors here -->
       </ul>
     </div>
 
