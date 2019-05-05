@@ -40,7 +40,7 @@ const donors = [{
   city: 'San Francisco',
   zip: '23241',
   type: 'Food',
-  details: 'spaghetti for up to 5 people'
+  details: 'pasta for up to 5 people'
 },
 {
   first: 'Heather',
