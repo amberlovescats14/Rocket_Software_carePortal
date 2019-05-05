@@ -217,7 +217,7 @@ const search = (e) => {
  let zipcode = reg.test(value)
  donors.map((item) => {
    console.log(item)
-   if(value == item ){
+   if(value == item ){f
      console.log(item)
    }
  })
