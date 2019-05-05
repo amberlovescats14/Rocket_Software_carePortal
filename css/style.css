@@ -71,6 +71,10 @@ input {
   margin-bottom: 5px;
 }
 
+select {
+  margin-bottom: 5px;
+}
+
 #addUserIcon {
   margin-right: 5px;
 }
@@ -89,8 +93,8 @@ input {
 #donorList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  padding: 0 2em 4em;
+  grid-gap: 20px;
+  padding: 0 40px 60px;
   /* overflow: scroll; */
 }
 
@@ -126,6 +130,10 @@ li b {
   height: 100vh;
 }
 
+.search-filter {
+  display: flex;
+}
+
 #typeSelect, #donorType {
   outline: none;
   min-width: 150px;
@@ -145,7 +153,7 @@ li b {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding-top: 10px;
+  padding: 10px 40px 0;
 }
 
 #bar {
@@ -166,31 +174,34 @@ li b {
 <i class="fas fa-utensils"></i> 
 <i class="fas fa-question-circle"></i>
 */
+/* tablet styles */
 
-@media (min-width: 640px) and (max-width: 1080px){
-  #formWrapper {
-    font-size: 1vh
-  }
+@media (min-width: 768px) and (max-width: 1080px){
+
   .header {
-    height: 7vh;
-    font-size: 2vh;
+
   }
   .logo {
-    height: 100%;
     width: 100%;
+
+    
   }
-  #typeSelect, #donorType{
-    width: 10vw;
+
+  #donorList {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 640px) {
+
+
+/* mobile styles */
+
+@media (max-width: 768px) {
   div.header {
     width: 100%;
     height: 10%;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
-    /* border: 2px solid black; */
   }
   
   img.logo {
@@ -204,47 +215,20 @@ li b {
     display: grid;
     grid-area: h1;
     grid-row: 2/-1;
-    font-size: 2vh;
+    font-size: 24px;
     margin-top: 10px;
   }
-  #formWrapper {
-    font-size: 1vh;
-    padding: 0;
-    margin: 0;
-  }
-  #donorForm #typeSelect{
-    width: 50%;
-    padding: 2px;
-    font-size: 1vh;
 
-  }
-
-  ul#donorList {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    margin: 0px;
+  .content_container {
+    margin: 0 auto;
+    min-height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
-    /* overflow: scroll; */
-  
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
   }
- 
-  ul {
-    padding-bottom: 5px;
-    list-style-type: none;
-    background: white;
-    margin-left: 0px;
-    font-size: 1vh;
+
+  #donorList {
+    grid-template-columns: repeat(1, 1fr);
   }
-  button#submit {
-    height: 5vh;
-    font-size: 10px;
-  }
-  #donorList button {
-    height: 15px;
-    font-size: 5px;
-    
-  }
+
 }
