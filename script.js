@@ -236,7 +236,7 @@ const testing = (e) => {
     // console.log(donors[targetId])
     // console.log(donors[targetId].zip)
     console.log(donors[targetId])
-    
+    e.target.removeAttribute('class')
   }else{
     e.target.innerHTML = 'Save'
     blah.setAttribute('contenteditable', 'true')
