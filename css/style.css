@@ -18,6 +18,10 @@ button {
   margin-right: 10px;
 }
 
+.saveButton {
+  background-color: grey;
+}
+
 a {
   color: #F26631;
 }
@@ -103,6 +107,11 @@ select {
   border-bottom: 5px solid hsl(0, 0%, 90%);
   padding: 20px;
   border-radius: 8px;
+}
+
+.cardStyle {
+  border: 1px solid #F26631 !important;
+  border-bottom: 5px solid #F26631 !important;
 }
 
 li {

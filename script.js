@@ -237,10 +237,12 @@ const testing = (e) => {
     // console.log(donors[targetId].zip)
     console.log(donors[targetId])
     e.target.removeAttribute('class')
+    e.target.parentNode.removeAttribute('class')
   }else{
     e.target.innerHTML = 'Save'
     blah.setAttribute('contenteditable', 'true')
     e.target.setAttribute('class', 'saveButton')
+    e.target.parentNode.setAttribute('class', 'cardStyle')
   }
  }
  document.getElementById('submit').addEventListener('click', testing)
