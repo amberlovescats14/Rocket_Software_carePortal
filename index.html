@@ -59,17 +59,22 @@
     </div>
 
     <div class="list-container">
-        <section>
-            <label for="area">Donor Type</label></label>
-            <select id="typeSelect" onchange="donorList()" name="area">
-                <option value="all">Show All</option>
-                <option value="Services">Services</option>
-                <option value="Money">Money</option>
-                <option value="Items">Items</option>
-                <option value="Food">Food</option>
-                <option value="Other">Other</option>
-            </select>
-        </section>
+      <section id="search">
+        <input type="text" placeholder="Search here..." id="bar">
+        <input type="submit" value="Go" id="btn">
+      </section>
+      <section>
+        <label for="area">Donor Type</label>
+          <select id="typeSelect" onchange="donorList()" name="area">
+            <option value="all">Show All</option>
+            <option value="Services">Services</option>
+            <option value="Money">Money</option>
+            <option value="Items">Items</option>
+            <option value="Food">Food</option>
+            <option value="Other">Other</option>
+        </select>
+      </section>
+      
       <ul id="donorList">
         <!-- Emilio render donors here -->
       </ul>
