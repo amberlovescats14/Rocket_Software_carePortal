@@ -209,3 +209,11 @@ const testing = (e) => {
  }
  document.getElementById('submit').addEventListener('click', testing)
 //  document.getElementById('submit').addEventListener('click', testing)
+const search = (e) => {
+ let reg = new RegExp(/\d{5}/g);
+ let value = document.getElementById('s').value
+ let zipcode = reg.test(value)
+ console.log(zipcode)
+
+
+}

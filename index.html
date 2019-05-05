@@ -59,9 +59,17 @@
     </div>
 
     <div class="list-container">
+
+
+      <!-- ///form  -->
+      <div id="searching">
+        <input type="text" id="s" placeholder="Search">
+        <button class="submit" onclick="search()">X</button>
+      </div>
+      <!-- ///// -->
         <section>
             <label for="area">Donor Type</label></label>
-            <select id="typeSelect" onchange="donorList()" name="area">
+            <select id="typeSelect" onchange="donorList()" type="button" name="area">
                 <option value="all">Show All</option>
                 <option value="Services">Services</option>
                 <option value="Money">Money</option>
