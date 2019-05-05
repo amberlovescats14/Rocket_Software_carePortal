@@ -211,9 +211,16 @@ const testing = (e) => {
 //  document.getElementById('submit').addEventListener('click', testing)
 const search = (e) => {
  let reg = new RegExp(/\d{5}/g);
+
  let value = document.getElementById('s').value
+//  console.log(value)
  let zipcode = reg.test(value)
- console.log(zipcode)
+ donors.map((item) => {
+   console.log(item)
+   if(value == item ){
+     console.log(item)
+   }
+ })
 
 
 }
