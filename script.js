@@ -240,6 +240,7 @@ const testing = (e) => {
   }else{
     e.target.innerHTML = 'Save'
     blah.setAttribute('contenteditable', 'true')
+    e.target.setAttribute('class', 'saveButton')
   }
  }
  document.getElementById('submit').addEventListener('click', testing)
