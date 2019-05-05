@@ -16,6 +16,7 @@ button {
   display: inline-block;
   font-size: 12px;
   margin-right: 10px;
+  outline: none;
 }
 
 .saveButton {
@@ -112,6 +113,7 @@ select {
 .cardStyle {
   border: 1px solid #F26631 !important;
   border-bottom: 5px solid #F26631 !important;
+  outline: none;
 }
 
 li {
