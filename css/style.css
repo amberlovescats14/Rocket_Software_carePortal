@@ -68,7 +68,11 @@ section   {
 input {
   padding: 5px;
   border: 1px solid gray;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+#addUserIcon {
+  margin-right: 10px;
 }
 
 #submit {
