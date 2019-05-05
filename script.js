@@ -9,7 +9,8 @@ const donors = [{
   org: 'Mosaic',
   city: 'Austin',
   zip: '78727',
-  type: 'Money'
+  type: 'Money',
+  details: '$500'
 },
 {
   first: 'Keith',
@@ -18,7 +19,8 @@ const donors = [{
   org: 'Cowboy Church',
   city: 'Arp',
   zip: '78787',
-  type: 'Services'
+  type: 'Services',
+  details: 'Roofing'
 },
 {
   first: 'Jane',
@@ -27,7 +29,8 @@ const donors = [{
   org: 'Clintwood Church',
   city: 'Clintwood',
   zip: '57832',
-  type: 'Items'
+  type: 'Items',
+  details: 'Bed, Dresser'
   },
 {
   first: 'Mary',
@@ -36,7 +39,8 @@ const donors = [{
   org: 'Blessed Bay Church',
   city: 'San Francisco',
   zip: '23241',
-  type: 'Food'
+  type: 'Food',
+  details: 'spaghetti for up to 5 people'
 },
 {
   first: 'Heather',
@@ -45,7 +49,8 @@ const donors = [{
   org: 'Index Church',
   city: 'Arp',
   zip: '75750',
-  type: 'Services'
+  type: 'Services',
+  details: 'woodworking, minor construction'
 },
 {
   first: 'Amber',
@@ -54,7 +59,8 @@ const donors = [{
   org: 'Sass Church',
   city: 'San Antonio',
   zip: '78247',
-  type: 'Food'
+  type: 'Food',
+  details: 'canned goods'
 },
 {
   first: 'Josh',
@@ -63,7 +69,8 @@ const donors = [{
   org: 'Json Church',
   city: 'Austin',
   zip: '78745',
-  type: 'Items'
+  type: 'Items',
+  details: 'fridge'
 },
 {
   first: 'Jonny',
@@ -72,7 +79,8 @@ const donors = [{
   org: 'Styl Church',
   city: 'Killen',
   zip: '78665',
-  type: 'Services'
+  type: 'Other',
+  details: 'time to help run errands, baby-sitting'
 },
 {
   first: 'Emilio',
@@ -81,7 +89,8 @@ const donors = [{
   org: 'JS Church',
   city: 'Pfluggerville',
   zip: '78223',
-  type: 'Money'
+  type: 'Money',
+  details: '$1,000'
 },
 ];
 const testing = (e) => {
@@ -94,7 +103,10 @@ const testing = (e) => {
    let city = document.getElementById('city').value
    let zip = document.getElementById('zip').value
    let type = document.getElementById('donorType').value
-   if(firstName && lastName && email && group && city && zip && type){
+   let details = document.getElementById('details').value
+   console.log(details)
+
+   if(firstName && lastName && email && group && city && zip && type && details){
      let obj = {
       first: firstName,
       last: lastName,
@@ -102,7 +114,8 @@ const testing = (e) => {
       org: group,
       city: city,
       zip: zip,
-      type: type
+      type: type,
+      details: details
     }
     donors.unshift(obj)
     document.getElementById('donorForm').reset();
@@ -138,6 +151,8 @@ const testing = (e) => {
       let cityVal = document.createElement('li');
       let zipVal = document.createElement('li');
       let typVal = document.createElement('li');
+      let detailVal = document.createElement('li');
+
       //setting emails
       let a = document.createElement('a');
       var linkText = document.createTextNode("Email: "+item.email)
@@ -162,6 +177,8 @@ const testing = (e) => {
       zipVal.setAttribute( "id", "zipVal")
       typVal.innerHTML = ' Donation Type: ' + item.type
       typVal.setAttribute( "id", "typVal")
+      detailVal.innerHTML = `Details: ${item.details}`
+      detailVal.setAttribute('id', 'detailContent')
       listItem.appendChild(name)
       listItem.appendChild(a);
 
@@ -170,11 +187,14 @@ const testing = (e) => {
       listItem.appendChild(cityVal)
       listItem.appendChild(zipVal)
       listItem.appendChild(typVal)
+      listItem.appendChild(detailVal)
+      // console.log(detailVal)
+
       listItem.appendChild(removeButton)
       listItem.appendChild(editButton)
       document.getElementById('donorList').appendChild(listItem);
 
-      $(`#${donors.indexOf(item)}`).each(function(index){
+      $(`#${donors.indexOf(item)}`).each(function(){
         // console.log(item.first + ' '+ index + ": " + $(this).text())
         console.log($(this).text().toLowerCase())
         if($(this).text().toLowerCase().includes(searchCondition.toLowerCase())){
@@ -184,6 +204,7 @@ const testing = (e) => {
       // console.log("Bool", bool)
       if(!bool || typeOfDonors !== item.type && typeOfDonors !== 'all'){
         document.getElementById('donorList').removeChild(listItem);
+        // document.getElementById('bar').value = ''
       }
 
    })
@@ -234,6 +255,4 @@ const search = (e) => {
     //  console.log(item)
    }
  })
-
-
 }
