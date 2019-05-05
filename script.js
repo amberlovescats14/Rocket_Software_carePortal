@@ -113,7 +113,7 @@ const testing = (e) => {
    document.getElementById('donorList').innerHTML = ' ';
    let searchCondition = document.getElementById('bar').value
    let typeOfDonors = document.getElementById('typeSelect').value
-   console.log(searchCondition,"asdf")
+  //  console.log(searchCondition,"asdf")
    donors.map((item) => {
     //  console.log(item.type + ' ' + typeOfDonors)
      let bool = false;
@@ -176,7 +176,8 @@ const testing = (e) => {
 
       $(`#${donors.indexOf(item)}`).each(function(index){
         // console.log(item.first + ' '+ index + ": " + $(this).text())
-        if($(this).text().includes(searchCondition)){
+        console.log($(this).text().toLowerCase())
+        if($(this).text().toLowerCase().includes(searchCondition.toLowerCase())){
           bool = true;
         }
       })
@@ -209,8 +210,8 @@ const testing = (e) => {
     donors[targetId].zip = document.getElementById(targetId).childNodes[5].textContent.split(':')[1].trim()
     donors[targetId].type = document.getElementById(targetId).childNodes[6].textContent.split(':')[1].trim()
     // document.getElementById(targetId).childNodes[6].setAttribute('value', `${donors[targetId].type}`)
-    console.log(donors[targetId].type.trim())
-    console.log(donors[targetId])
+    // console.log(donors[targetId].type.trim())
+    // console.log(donors[targetId])
     // console.log(donors[targetId].zip)
     // console.log(donors[targetId])
     
@@ -228,9 +229,9 @@ const search = (e) => {
 //  console.log(value)
  let zipcode = reg.test(value)
  donors.map((item) => {
-   console.log(item)
+  //  console.log(item)
    if(value == item ){
-     console.log(item)
+    //  console.log(item)
    }
  })
 
