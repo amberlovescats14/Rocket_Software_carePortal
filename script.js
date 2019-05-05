@@ -163,18 +163,18 @@ const testing = (e) => {
       typVal.innerHTML = ' Donation Type: ' + item.type
       typVal.setAttribute( "id", "typVal")
       listItem.appendChild(name)
+      listItem.appendChild(typVal)
       listItem.appendChild(a);
 
       listItem.appendChild(emailVal)
       listItem.appendChild(orgVal)
       listItem.appendChild(cityVal)
       listItem.appendChild(zipVal)
-      listItem.appendChild(typVal)
       listItem.appendChild(removeButton)
       listItem.appendChild(editButton)
       document.getElementById('donorList').appendChild(listItem);
 
-      $(`#${donors.indexOf(item)}`).each(function(index){
+      $(`#${donors.indexOf(item)}`).each(function(){
         // console.log(item.first + ' '+ index + ": " + $(this).text())
         console.log($(this).text().toLowerCase())
         if($(this).text().toLowerCase().includes(searchCondition.toLowerCase())){
@@ -204,16 +204,16 @@ const testing = (e) => {
     let nameArr =document.getElementById(targetId).childNodes[0].textContent.split(' ')
     donors[targetId].first = nameArr[0]
     donors[targetId].last = nameArr[1]
-    donors[targetId].email = document.getElementById(targetId).childNodes[1].textContent.split(':')[1].trim()
-    donors[targetId].org = document.getElementById(targetId).childNodes[3].textContent.split(':')[1].trim()
-    donors[targetId].city = document.getElementById(targetId).childNodes[4].textContent.split(':')[1].trim()
-    donors[targetId].zip = document.getElementById(targetId).childNodes[5].textContent.split(':')[1].trim()
-    donors[targetId].type = document.getElementById(targetId).childNodes[6].textContent.split(':')[1].trim()
+    donors[targetId].type = document.getElementById(targetId).childNodes[1].textContent.split(':')[1].trim()
+    donors[targetId].email = document.getElementById(targetId).childNodes[2].textContent.split(':')[1].trim()
+    donors[targetId].org = document.getElementById(targetId).childNodes[4].textContent.split(':')[1].trim()
+    donors[targetId].city = document.getElementById(targetId).childNodes[5].textContent.split(':')[1].trim()
+    donors[targetId].zip = document.getElementById(targetId).childNodes[6].textContent.split(':')[1].trim()
     // document.getElementById(targetId).childNodes[6].setAttribute('value', `${donors[targetId].type}`)
     // console.log(donors[targetId].type.trim())
     // console.log(donors[targetId])
     // console.log(donors[targetId].zip)
-    // console.log(donors[targetId])
+    console.log(donors[targetId])
     
   }else{
     e.target.innerHTML = 'Save'
