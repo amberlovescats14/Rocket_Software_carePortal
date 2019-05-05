@@ -111,7 +111,9 @@ const testing = (e) => {
  }
  const donorList = () => {
    document.getElementById('donorList').innerHTML = ' ';
+   let searchCondition = document.getElementById('bar').value
    let typeOfDonors = document.getElementById('typeSelect').value
+   console.log(searchCondition,"asdf")
    donors.map((item) => {
     //  console.log(item.type + ' ' + typeOfDonors)
      let bool = false;
@@ -173,13 +175,13 @@ const testing = (e) => {
       document.getElementById('donorList').appendChild(listItem);
 
       $(`#${donors.indexOf(item)}`).each(function(index){
-        console.log(item.first + ' '+ index + ": " + $(this).text())
-        if($(this).text().includes(typeOfDonors)){
+        // console.log(item.first + ' '+ index + ": " + $(this).text())
+        if($(this).text().includes(searchCondition)){
           bool = true;
         }
       })
-      console.log("Bool", bool)
-      if(!bool && typeOfDonors !== 'all'){
+      // console.log("Bool", bool)
+      if(!bool || typeOfDonors !== item.type && typeOfDonors !== 'all'){
         document.getElementById('donorList').removeChild(listItem);
       }
 
