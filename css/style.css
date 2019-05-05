@@ -97,13 +97,13 @@ li {
 li:first-child {
   border-bottom: 2px solid #F26631;
   margin-bottom: 10px;
-  background: whitesmoke;
+  /* background: whitesmoke; */
 }
 
 li b {
   display: block;
   margin-bottom: 15px;
-  background: whitesmoke;
+  /* background: whitesmoke; */
 }
 
 .list-container {
